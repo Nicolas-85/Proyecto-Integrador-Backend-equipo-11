@@ -1,9 +1,14 @@
-const index = (req, res) => {
-    res.render('admin')
+const fs = require('fs')
+
+const admin = (req, res) => {
+    let getItems = fs.readFileSync('C:/Users/seba_/OneDrive/Documents/CaC - 23573 - Javascipt y Node/Backend rutas - TEST/articulos.json')
+    console.log(JSON.parse(getItems))
+    getItems = JSON.parse(getItems)
+    res.render('admin/admin', {getItems})
 }
 
 const createGet = (req, res) => {
-    res.render('create')
+    res.render('admin/create')
 }
 
 const createPost = (req, res) => {
@@ -11,7 +16,7 @@ const createPost = (req, res) => {
 }
 
 const editGet = (req, res) => {
-    res.render('edit')
+    res.render('admin/edit')
 }
 
 const editPut = (req, res) => {
@@ -25,7 +30,7 @@ const destroy = (req, res) => {
 
 
 module.exports = {
-    index,
+    admin,
     createGet,
     createPost,
     editGet,

@@ -1,0 +1,40 @@
+<%- contentFor('title') %> Registrarse | Funkoshop 
+
+<%- contentFor('body') %> 
+<main> <!-- Inicio Main -->
+    <section class="container">
+        <form autocomplete="off" class="form" method="post">
+            <div class="form__header">
+                <h1 class="form__title">CREA TU CUENTA</h1>
+                <h2 class="form__subtitle">Completa el formulario para ser parte del mundo de los Funkos</h2>
+            </div>
+            <div class="form__fields">
+                <div class="form__field">
+                    <label for="nombre" class="form__label">Nombre:</label>
+                    <input type="text" name="nombre" class="form__input" id="nombre" placeholder="John">
+                </div>
+                <div class="form__field">
+                    <label for="apellido" class="form__label" >Apellido:</label>
+                    <input type="text" name="apellido" class="form__input" id="apellido" placeholder="Doe">
+                </div>
+                <div class="form__field">
+                    <label for="email" class="form__label" >Email:</label>
+                    <input type="text" name="email" class="form__input" id="email" placeholder="johndoe@correo.com">
+                </div>
+                <div class="form__field">
+                    <label for="contrasenia" class="form__label" >Contraseña:</label>
+                    <input type="password" name="contrasenia" class="form__input" id="contrasenia" placeholder=".........">
+                </div>
+                <div class="form__field">
+                    <label for="contrasenia2" class="form__label" >Repetir contraseña:</label>
+                    <input type="password" name="contrasenia2" class="form__input" id="contrasenia2" placeholder=".........">
+                </div>
+            </div>
+            <div class="form__footer">
+                <button type="submit" class="form__button">Registrar</button>
+                <input type="checkbox" name="terminosCondiciones" class="form__checkbox" id="terminosCondiciones">
+                <label for="terminosCondiciones" class="form__checkbox-label">Acepto <span><a href="#" target="_blank">Términos y Condiciones</a></span></label>
+            </div>
+        </form>
+    </section>
+</main> <!-- Fin Main -->

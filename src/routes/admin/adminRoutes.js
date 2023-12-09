@@ -3,7 +3,7 @@ const router = express.Router()
 
 const controller = require('../../controllers/admin/adminController')
 
-router.get('/',  controller.index);
+router.get('/admin',  controller.admin); //cambiar a /admin
 
 router.get('/admin/create', controller.createGet);
 

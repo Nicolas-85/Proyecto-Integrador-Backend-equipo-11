@@ -321,6 +321,7 @@ header{
     flex-direction: column;
     gap: var(--spacing-12);
     padding: var(--spacing-16);
+    text-transform: uppercase;
 }
 
 .card-item__licence{

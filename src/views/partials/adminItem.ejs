@@ -1,0 +1,21 @@
+<td class="font__item-td2"><%= item.product_id %></td>
+<td class="font__item-td2"><%= item.product_sku %></td>
+<td class="font__item-td2"><%= item.product_name %></td>
+<td class="font__item-td2"><%= item.licence_name %></td>
+<td class="font__item-td2">
+  <button>
+    <a href="/admin/edit/:id">
+      <i class="fa-solid fa-pen fa-2xl" style="color: #1d84b5"></i>
+    </a>
+  </button>
+</td>
+<td class="font__item-td2">
+  <form action="/admin/delete/:id?_method=DELETE" method="post">
+    <button type="submit">
+      <i
+        class="fa-solid fa-trash-can fa-2xl"
+        style="color: #ff3333"
+      ></i>
+    </button>
+  </form>
+</td>

@@ -1,0 +1,65 @@
+<%- contentFor('title') %> Admin | Funkoshop 
+
+<%- contentFor('body') %> 
+<main>
+  <!-- Inicio Main -->
+
+  <section class="searcher container">
+    <div class="searcher__container">
+      <button class="searcher__btn" type="submit">
+        <i
+          class="fa-solid fa-magnifying-glass fa-2xl"
+          style="color: #000000"
+        ></i>
+      </button>
+      <form action="POST" autocomplete="off">
+        <input
+          class="searcher__input"
+          type="text"
+          name="buscar"
+          id="buscar"
+          placeholder="código, nombre o categoria"
+        />
+      </form>
+    </div>
+  </section>
+
+  <section class="list container">
+    <article class="list__title-container">
+      <h1 class="list__title">LISTADO DE PRODUCTOS</h1>
+      <div class="list__title-subcontainer">
+        <p>AGREGAR</p>
+        <a href="/admin/create">
+          <button class="list__title-btn">
+            <i
+              class="fa-solid fa-square-plus fa-2xl"
+              style="color: #ff3333"
+            ></i>
+          </button>
+        </a>
+      </div>
+    </article>
+    <article class="list__item-container">
+      <table class="list__item-table">
+        <thead>
+          <tr>
+            <th class="list__item-td1">ID</th>
+            <th class="list__item-td1">Código</th>
+            <th class="list__item-td1">Nombre del Producto</th>
+            <th class="list__item-td1">Categoria</th>
+            <th class="list__item-td1"></th>
+            <th class="list__item-td1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% getItems.forEach(item => {%>
+              <%- include('../partials/adminItem', { item }) %>
+          </tr>
+            <%}) %>
+        </tbody>
+      </table>
+    </article>
+  </section>
+</main>
+<!-- Fin Main -->
